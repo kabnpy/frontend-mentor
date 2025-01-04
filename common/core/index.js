@@ -1,4 +1,4 @@
-export { createSignal } from './signal';
-export { createDerivedSignal } from './derivedSignal';
-export { createEffect } from './effect';
-export { html } from './html';
+export { createSignal } from './signal.js';
+export { createDerivedSignal } from './derivedSignal.js';
+export { createEffect } from './effect.js';
+export { html } from './html.js';
