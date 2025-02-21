@@ -1,0 +1,132 @@
+:root {
+  /* ### Primary */
+
+  --Moderate-blue: hsl(238, 40%, 52%);
+  --Soft-Red: hsl(358, 79%, 66%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+
+  /* ### Neutral */
+
+  --Dark-blue: hsl(212, 24%, 26%);
+  --Grayish-Blue: hsl(211, 10%, 45%);
+  --Light-gray: hsl(223, 19%, 93%);
+  --Very-light-gray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  color: var(--Grayish-Blue);
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Very-light-gray);
+}
+
+.comments-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.comment {
+  align-items: flex-start;
+  display: flex;
+  gap: 1.5rem;
+  background-color: var(--White);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.comment-score {
+  align-items: center;
+  border-radius: .5rem;
+  color: var(--Moderate-blue);
+  background-color: var(--Very-light-gray);
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.comment-score button {
+  background: none;
+  border: none;
+}
+
+.comment-score button:hover {
+  color: var(--Moderate-blue);
+  cursor: pointer;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-user {
+  display: flex;
+  align-items: center;
+  color: var(--Dark-blue);
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.comment-user__img {
+  border-radius: 50%;
+  height: 2rem;
+  margin-right: .5rem;
+  width: 2rem;
+}
+
+.comment-data {
+  display: flex;
+  align-items: center;
+}
+
+.comment-form {
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.comment-form  form {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.comment-form textarea {
+  flex-grow: 1;
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.replies {
+  margin-left: 2rem;
+  border-left: 2px solid var(--Light-gray);
+  padding-left: 1rem;
+}
+
+.reply {
+  color: var(--Moderate-blue);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--White);
+  border: none;
+  padding: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.reply-line {
+  width: 2px;
+  background-color: var(--Light-gray);
+}
+
+.reply-content {
+  flex: 1;
+}
