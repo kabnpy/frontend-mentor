@@ -5,26 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor Challenges</title>
-  <link rel="stylesheet" href="/shared/styles/reset.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./common/styles/reset.css">
+  <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 
 <body>
-  <header>
-    <h1>Frontend Mentor Challenges</h1>
-    <nav>
-      <ul>
-        <li><a href="">Challenge 1</a></li>
-        <li><a href="">Challenge 2</a></li>
-        <li><a href="">Challenge 3</a></li>
-        <!-- Add more challenges as needed -->
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="site-header__logo">
+      <img src="./assets/images/logo-desktop.svg" alt="Frontend Mentor Logo">
+    </div>
+    <div class="site-header__heading">
+      <span>Challenges</span>
+    </div>
   </header>
   <main>
-    <section>
-      <h2>Welcome to the Frontend Mentor Challenges</h2>
-      <p>Select a challenge from the navigation above to get started.</p>
+    <section class="wrapper">
+      <ul class="grid">
+        <li>
+          <a href="./challenges/product-list-with-cart/index.html"><img src="./challenges/product-list-with-cart/preview.jpg" alt=""></a>
+          <a href="./challenges/product-list-with-cart/index.html">Product list with cart</a>
+        </li>
+        <li>
+          <a href="./challenges/interactive-comments-section/index.html"><img src="./challenges/interactive-comments-section/design/desktop-preview.jpg" alt=""></a>
+          <a href="./challenges/interactive-comments-section/index.html">Interactive comments section</a>
+        </li>
+        <li>
+          <a href="./"><img src="./" alt=""></a>
+          <a href="./"></a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer>
