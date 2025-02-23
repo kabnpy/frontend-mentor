@@ -1,0 +1,121 @@
+:root {
+    --space-xs: clamp(0.4375rem, 0.42rem + 0.10vw, 0.5rem);
+    --space-s: clamp(0.875rem, 0.83rem + 0.20vw, 1rem);
+    --space-m: clamp(1.3125rem, 1.25rem + 0.29vw, 1.5rem);
+    --space-l: clamp(2.1875rem, 2.09rem + 0.49vw, 2.5rem);
+    --space-xl: clamp(3.0625rem, 2.92rem + 0.69vw, 3.5rem);
+    --space-2xl: clamp(3.5rem, 3.34rem + 0.78vw, 4rem);
+    --space-3xl: clamp(4.375rem, 4.17rem + 0.98vw, 5rem);
+    --space-4xl: clamp(6.5625rem, 6.26rem + 1.47vw, 7.5rem);
+    --space-xs-l: clamp(0.4375rem, -0.23rem + 3.24vw, 2.5rem);
+    --space-m-l: clamp(1.3125rem, 0.93rem + 1.86vw, 2.5rem);
+    --space-2xl-4xl: clamp(3.5rem, 2.21rem + 6.27vw, 7.5rem);
+    --size-step-000: clamp(0.740625rem, 0.73rem + 0.06vw, 0.78125rem);
+    --size-step-00: clamp(0.833125rem, 0.80rem + 0.16vw, 0.9375rem);
+    --size-step-0: clamp(0.9375rem, 0.88rem + 0.29vw, 1.125rem);
+    --size-step-1: clamp(1.055rem, 0.96rem + 0.46vw, 1.35rem);
+    --size-step-2: clamp(1.18625rem, 1.05rem + 0.68vw, 1.62rem);
+    --size-step-3: clamp(1.335rem, 1.14rem + 0.95vw, 1.94375rem);
+    --size-step-4: clamp(1.501875rem, 1.23rem + 1.30vw, 2.3325rem);
+    --size-step-5: clamp(1.689375rem, 1.33rem + 1.74vw, 2.799375rem);
+    --size-step-6: clamp(1.900625rem, 1.43rem + 2.29vw, 3.359375rem);
+    --size-step-7: clamp(2.138125rem, 1.53rem + 2.97vw, 4.03125rem);
+    --size-step-8: clamp(2.405625rem, 1.62rem + 3.81vw, 4.8375rem);
+    --size-step-9: clamp(2.70625rem, 1.70rem + 4.86vw, 5.805rem);
+    --size-step-10: clamp(3.03125rem, 1.76rem + 6.17vw, 6.965625rem);
+    --size-step-11: clamp(3.78875rem, 1.63rem + 10.45vw, 10.448125rem);
+    --size-step-12: clamp(3.78875rem, 0.36rem + 16.61vw, 14.375rem);
+
+    --transition-fade: 300ms ease;
+
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    margin: 0;
+}
+
+.site-header__logo {
+    padding: 1rem;
+}
+
+.site-header__heading {
+    line-height: 1;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 1px solid hsl(185, 17%, 88%);
+    margin: 0;
+}
+
+.site-header__heading span {
+    border-inline: 1px solid hsl(185, 17%, 88%);
+    padding: 1rem;
+}
+
+.card {
+    --focus-color: var(--color-primary);
+
+    border: 1px solid hsl(185, 17%, 88%);
+    border-radius: var(--radius-l);
+    padding: var(--space-l);
+    position: relative;
+}
+
+.card__heading {
+    font-size: var(--size-step-00);
+    text-transform: uppercase;
+    letter-spacing: var(--uppercase-kerning);
+    color: var(--color-light);
+}
+
+.card__meta {
+    --flow-space: var(--space-s);
+
+    font-size: var(--size-step-2);
+    line-height: var(--leading-flat);
+}
+
+.card__content {
+    margin-block-start: var(--space-l);
+}
+
+.card:has([href]:hover) {
+    background: rgb(from var(--color-light) r g b / 5%);
+    transition: background var(--transition-fade);
+}
+
+.flow>*+* {
+    margin-block-start: var(--flow-space, 1em);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-placement, auto-fill),
+            minmax(var(--grid-min-item-size, 16rem), 1fr));
+    gap: var(--gutter, var(--space-l));
+}
+
+/* A split 50/50 layout */
+
+.grid[data-layout='50-50'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+}
+
+/* Three column grid layout */
+
+.grid[data-layout='thirds'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 33%, 20rem);
+}
+
+.wrapper {
+    margin-inline: auto;
+    max-width: var(--wrapper-max-width, 1360px);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    position: relative;
+}

@@ -1,0 +1,169 @@
+/* Font face */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  src: url("assets/fonts/DMSans-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: italic;
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf");
+}
+
+/* Color variables */
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+body {
+  background-color: hsl(0, 0%, 96%);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+
+/* Typography */
+h1,
+h2 {
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.1591rem + 1.4545vw, 2.25rem);
+  letter-spacing: -0.1rem;
+}
+
+/* Grid setup */
+.grid {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .grid {
+    display: grid;
+    max-width: 1200px;
+    height: 896px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-areas:
+      "section-07 section-01 section-01 section-04"
+      ". section-02 section-03 section-04"
+      "section-08 section-06 section-05 section-05";
+  }
+
+  .section-04 {
+    > * {
+      text-align: start;
+    }
+    img {
+      max-width: none;
+      width: 22rem;
+    }
+  }
+
+  .section-05 {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 80%;
+    }
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .section-07 {
+    height: 155%;
+  }
+
+  .section-08 {
+    margin-block-start: -70%;
+  }
+}
+
+/* Sections */
+.section {
+  border-radius: 0.5rem;
+  padding-inline: 1.5rem;
+  overflow: hidden;
+
+  > * + * {
+    margin-block-start: 1rem;
+  }
+}
+
+.section-01 {
+  background: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+  grid-area: section-01;
+
+  img {
+    height: 2rem;
+    margin-inline: auto;
+  }
+
+  span {
+    color: var(--Yellow-500);
+  }
+}
+
+.section-02 {
+  background: var(--White);
+  font-size: 1.5rem;
+  font-weight: 500;
+  grid-area: section-02;
+  padding: 1.5rem;
+}
+
+.section-03 {
+  background: var(--Yellow-500);
+  grid-area: section-03;
+}
+
+.section-04 {
+  background: var(--Purple-100);
+  text-align: center;
+  grid-area: section-04;
+}
+
+.section-05 {
+  background: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+  grid-area: section-05;
+}
+
+.section-06 {
+  background: var(--White);
+  grid-area: section-06;
+}
+
+.section-07 {
+  background: var(--Yellow-100);
+  grid-area: section-07;
+
+  em {
+    color: var(--Purple-500);
+  }
+}
+
+.section-08 {
+  background: var(--Yellow-500);
+  grid-area: section-08;
+}

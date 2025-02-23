@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+   <link rel="stylesheet" href="./styles/reset.css">
+   <link rel="stylesheet" href="./styles/main.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="with-sidebar">
+    <div class="form-section">
+      <div class="container">
+        <header>
+          <h1>Mortgage Calculator</h1>
+          <button class="reset-button js-reset">Clear All</button>
+        </header>
+        <form id="mortgage-form" action="#">
+          <p>
+            <label for="mortgage-amount">Mortgage Amount</label>
+            <span class="input-icon"
+              ><span>$</span
+              ><input
+                type="number"
+                name="mortgage-amount"
+                id="mortgage-amount"
+                required
+            /></span>
+          </p>
+          <div class="switcher">
+            <p>
+              <label for="mortgage-term">Mortgage Term</label>
+              <span class="input-icon"
+                ><input
+                  type="number"
+                  name="mortgage-term"
+                  id="mortgage-term"
+                  required
+                /><span>years</span></span
+              >
+            </p>
+            <p>
+              <label for="interest-rate">Interest Rate</label>
+              <span class="input-icon"
+                ><input
+                  type="number"
+                  name="interest-rate"
+                  id="interest-rate"
+                  step="0.01"
+                  required
+                /><span>%</span></span
+              >
+            </p>
+          </div>
+          <p>Mortgage Type</p>
+          <p class="radio-group">
+            <label class="radio" for="repayment">
+              <input type="radio" name="mortgage-type" id="repayment" required/>
+              Repayment
+            </label>
+            <label class="radio" for="interest">
+              <input type="radio" name="mortgage-type" id="interest" required/>
+              Interest Only
+            </label>
+          </p>
+          <button type="submit">
+            <img src="./assets/images/icon-calculator.svg" alt="" />Calculate
+            Repayments
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="results-section">
+      <div class="container">
+        <!-- Empty results start -->
+        <div class="empty-state">
+          <img src="./assets/images/illustration-empty.svg" alt="" />
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click “calculate repayments” to see what
+            your monthly repayments would be.
+          </p>
+        </div>
+        <!-- Empty results end -->
+        <!-- Completed results start -->
+        <div class="completed-state" style="display: none">
+          <h2>Your results</h2>
+          <p>
+            Your results are shown below based on the information you
+            provided. To adjust the results, edit the form and click
+            “calculate repayments” again.
+          </p>
+          <div class="results">
+            <span>Your monthly repayments</span>
+            <p class="monthly-result"></p>
+            <hr>
+            <span>Total you'll repay over the term</span>
+            <p class="total-result"></p>
+          </div>
+        </div>
+        <!-- Completed results end -->
+      </div>
+    </div>
+  </main>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/kabnpy">kabnpy</a>.
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

@@ -1,5 +1,4 @@
-import { createSignal, createEffect, createDerivedSignal } from '../../../common/core/signals.js';
-import { html } from '../../../common/core/templating.js';
+import { createSignal, createDerivedSignal, createEffect, html } from "../../shared/reactivity/index.js";
 
 // Initialize signals
 const [products, setProducts] = createSignal([]);

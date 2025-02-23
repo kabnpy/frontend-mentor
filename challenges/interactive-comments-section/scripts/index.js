@@ -1,4 +1,4 @@
-import { createSignal, createEffect, html } from "../../../common/core/index.js";
+import { createSignal, createEffect, html } from "../../shared/reactivity/index.js";
 
 async function getData() {
   try {
